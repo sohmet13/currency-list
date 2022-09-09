@@ -1,0 +1,40 @@
+.line {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid gray;
+  height: 30px;
+
+  &__header {
+    font-weight: bold;
+    position: relative;
+  }
+
+  &__column-first {
+    flex: 1;
+  }
+
+  &__column-second {
+    flex: 0.3;
+    margin-right: 40px;
+  }
+
+  &__column-third {
+    flex: 0.8;
+  }
+
+  &__input {
+    width: 90%;
+  }
+}
+
+.reload-icon {
+  position: absolute;
+  right: 5px;
+  cursor: pointer;
+}
+
+.elipsis {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}

@@ -1,0 +1,20 @@
+<div class="line line__header">
+  <div class="line__column-first">Наименование</div>
+  <div class="line__column-second">Курс</div>
+  <div class="line__column-third">
+    <input
+      [(ngModel)]="userMoney"
+      type="number"
+      placeholder="Введите количество рублей для обмена"
+      class="line__input"/>
+  </div>
+
+  <span class="reload-icon" title="Обновить курс" (click)="onRefreshListButton()">&#x21bb;</span>
+</div>
+
+<div *ngFor="let currency of currencies; trackBy:currencyById" class="line">
+  <div class="line__column-first elipsis">{{currency.Name}}</div>
+  <div class="line__column-second elipsis">{{currency.Value}}</div>
+  <div class="line__column-third elipsis">{{userMoney / currency.Value || 0}}</div>
+</div>
+
